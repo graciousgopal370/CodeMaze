@@ -37,10 +37,6 @@
         <div class="header-laptop-1">
           <div class="header-laptop-1-container">
             <div class="header-laptop-1-1">Stuck ?</div>
-            <!-- <div class="header-laptop-1-2">
-              <div>?</div>
-              <div class="header-laptop-logo-2"></div>
-            </div> -->
           </div>
         </div>
         <div class="header-laptop-2">
@@ -77,11 +73,7 @@
           autofocus="on"
         />
 
-        <button type="submit">
-          <!-- <div class="search">
-            <img src="./search-code-svgrepo-com.svg" width="40px" alt="" />
-          </div> -->
-        </button>
+        <button type="submit"></button>
       </form>
     </section>
 
@@ -148,21 +140,13 @@
 
     <section class="footer">
       <div class="footer-container">
-        <a
-          href="https://www.linkedin.com/in/aditya-agrawal-37721b146/"
-          target="_blank"
-          class="footer-link link-1"
-          ><img src="/icons8-linkedin.svg" alt=""
-        /></a>
-        <a href="mailto: adityaagr00@gmail.com" class="footer-link link-2"
-          ><img src="/icons8-mail-50.png" alt=""
-        /></a>
+        <a href="mailto: your-email@example.com" class="footer-link link-2">
+          <img src="/icons8-mail-50.png" alt="" />
+        </a>
       </div>
-      <div class="copy-container">&copy; 2022 Made by Aditya Agrawal</div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/gsap"></script>
 
     <script>
@@ -212,8 +196,7 @@
       const questionLinks = document.querySelectorAll(".title");
       const questionText = document.querySelectorAll(".body");
       const noResultsDiv = document.querySelector(".no-results");
-      // console.log(questionLinks);
-      // console.log(questionText);
+
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
@@ -226,10 +209,10 @@
           questionLinks[i].querySelector("a").setAttribute("href", "#");
           questionText[i].querySelector("p").innerHTML = "";
         }
+
         const query = questionElement.value;
 
         try {
-          //   console.log("HELLO");
           const res = await fetch(`/search?query=${query}`, { method: "GET" });
           const data = await res.json();
 
@@ -247,8 +230,6 @@
               questionText[i].querySelector("p").innerHTML = data[i].problem;
             }
           }
-
-          console.log(data);
         } catch (error) {
           alert(error);
         }
