@@ -227,12 +227,13 @@ input:focus {
 button {
   background: #007acc;
   border: none;
-  font-size: 1rem; /* Slightly smaller font size for a thinner button */
+  font-size: 1rem; /* Thinner button */
   color: #ffffff;
-  padding: 8px 16px; /* Thinner button with less padding */
+  padding: 6px 12px; /* Reduced padding for a thinner button */
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-top: 10px; /* Ensure it appears below the input */
 }
 
 button:hover {
@@ -347,6 +348,7 @@ button:hover {
   padding: 1rem 0;
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
 }
 
 .footer-container a img {
@@ -365,3 +367,4 @@ button:hover {
   width: 70%;
   margin: 0 auto;
 }
+
