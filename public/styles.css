@@ -1,3 +1,6 @@
+Here's a more advanced CSS code that creates a high-tech, Git-like interface in dark mode. This design features a sleek, modern look with code editor vibes, making it suitable for dashboards, developer tools, or similar applications.
+
+```css
 /* Global Reset */
 * {
   margin: 0;
@@ -7,9 +10,9 @@
 
 /* Body Styling */
 body {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  font-family: "Montserrat", sans-serif;
-  color: #ffffff;
+  background: #1e1e1e;
+  font-family: "Fira Code", monospace;
+  color: #d4d4d4;
   overflow-x: hidden;
 }
 
@@ -21,9 +24,10 @@ body {
   padding: 20px;
   padding-bottom: 0;
   display: none;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
+  background: #252526;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
 }
 
 @media screen and (max-width: 900px) {
@@ -43,13 +47,15 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr;
   height: 100%;
-  color: #ffdf6b;
+  color: #61dafb;
 }
 
 .header-logo {
-  background: #ffffff;
+  background: url("./git-logo.svg") no-repeat center;
+  background-size: contain;
   border-radius: 50%;
   padding: 10px;
+  border: 2px solid #61dafb;
 }
 
 .header-text-1 {
@@ -60,7 +66,7 @@ body {
 }
 
 .header-text-2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   align-self: center;
   transform: translateY(-20%);
   font-weight: 500;
@@ -69,7 +75,7 @@ body {
 @media screen and (max-width: 400px) {
   .header-text-1,
   .header-text-2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -98,13 +104,14 @@ body {
 
 .header-laptop-1 {
   grid-area: a;
-  background: #334d92;
-  border-radius: 15px;
+  background: #252526;
+  border-radius: 8px;
   display: grid;
   align-items: center;
-  font-size: 3.5rem;
-  color: #ffdf6b;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-size: 2.5rem;
+  color: #c586c0;
+  border: 1px solid #333;
+  box-shadow: inset 0 0 10px #000;
 }
 
 .header-laptop-1-container,
@@ -123,44 +130,46 @@ body {
 }
 
 .header-laptop-logo {
-  background: url("./coding-terminal-svgrepo-com\ 1\ \(1\).svg") no-repeat center;
+  background: url("./code-icon.svg") no-repeat center;
   background-size: contain;
 }
 
 .header-laptop-2 {
   grid-area: b;
-  background: #3a6ea5;
-  border-radius: 15px;
+  background: #333333;
+  border-radius: 8px;
   display: grid;
   justify-content: center;
   align-items: center;
-  color: #ffdf6b;
-  font-size: 2.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #dcdcaa;
+  font-size: 2rem;
+  border: 1px solid #555;
+  box-shadow: inset 0 0 10px #000;
 }
 
 .auto-type {
-  font-size: 2rem;
-  color: #ffe65d;
-  caret-color: #ffe65d;
+  font-size: 1.5rem;
+  color: #ce9178;
+  caret-color: #ce9178;
 }
 
 .header-laptop-4 {
   grid-area: c;
-  background: #324a7d;
-  border-radius: 15px;
+  background: #252526;
+  border-radius: 8px;
   display: grid;
   align-items: center;
-  font-size: 4.5rem;
-  color: #ffdf6b;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-size: 3.5rem;
+  color: #569cd6;
+  border: 1px solid #333;
+  box-shadow: inset 0 0 10px #000;
 }
 
 .header-laptop-5 {
   grid-area: d;
-  background: #ffdf6b;
-  border: 3px solid #ffffff;
-  border-radius: 15px;
+  background: #007acc;
+  border: 3px solid #333;
+  border-radius: 8px;
   padding: 10px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -175,7 +184,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: #334d92;
+  color: #ffffff;
 }
 
 .search-form {
@@ -189,27 +198,27 @@ form {
 }
 
 input {
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
+  background: #1e1e1e;
+  border: 1px solid #333;
   width: 80%;
   text-align: center;
   font-weight: 700;
-  font-size: 1.5rem;
-  color: #ffdf6b;
+  font-size: 1.2rem;
+  color: #d4d4d4;
   padding: 10px;
   border-radius: 5px;
 }
 
 input:focus {
   outline: none;
-  border: 2px solid #ffdf6b;
+  border-color: #61dafb;
 }
 
 button {
-  background: #334d92;
+  background: #007acc;
   border: none;
-  font-size: 1.5rem;
-  color: #ffdf6b;
+  font-size: 1.2rem;
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -217,8 +226,7 @@ button {
 }
 
 button:hover {
-  background: #ffdf6b;
-  color: #334d92;
+  background: #005f99;
 }
 
 .loading-div {
@@ -242,17 +250,18 @@ button:hover {
 }
 
 .question {
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: #252526;
   padding: 10px;
   text-align: center;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
 }
 
 .question a {
   text-decoration: none;
-  color: #ffdf6b;
+  color: #61dafb;
   display: inline-block;
   margin-bottom: 0.8rem;
   font-weight: 600;
@@ -260,7 +269,7 @@ button:hover {
 
 .question p {
   font-size: 0.9rem;
-  color: #ffffff;
+  color: #d4d4d4;
 }
 
 @media screen and (min-width: 901px) {
@@ -284,9 +293,10 @@ button:hover {
   max-width: 500px;
   margin: 2rem auto;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: #252526;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
 }
 
 @media screen and (min-width: 1090px) {
@@ -297,14 +307,14 @@ button:hover {
 
 .question-div h1 {
   text-align: center;
-  color: #ffe65d;
-  font-size: 2.5rem;
+  color: #61dafb;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .question-div p {
   margin-top: 1.5rem;
-  color: #ffffff;
+  color: #d4d4d4;
   line-height: 1.6;
 }
 
@@ -312,12 +322,12 @@ button:hover {
   display: block;
   text-align: center;
   margin-top: 1rem;
-  color: #3a6ea5;
+  color: #858585;
 }
 
 .question-div small a {
   text-decoration: none;
-  color: #ffdf6b;
+  color: #61dafb;
 }
 
 /* Footer Section */
@@ -342,16 +352,11 @@ button:hover {
 }
 
 .copy-container {
-  color: #3a6ea5;
+  color: #858585;
   text-align: center;
   font-size: 0.8rem;
   margin-bottom: 1rem;
 }
 
 .rule-box {
-  width: 70px;
-  height: 2px;
-  background: #3a6ea5;
-  margin: 0 auto;
-  margin-top: 1rem;
-}
+  width: 70
