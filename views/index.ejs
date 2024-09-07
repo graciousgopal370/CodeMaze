@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeMate</title>
+    <title>CodeMate</title> <!-- Updated title -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -22,13 +22,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 20px; /* Optional: Adjust margin as needed */
+        margin-bottom: 20px; /* Optional: Adjust margin as needed */
       }
 
       .search-form form {
         width: 100%;
-        max-width: 600px;
+        max-width: 600px; /* Limit the maximum width of the search bar */
         display: flex;
       }
 
@@ -43,19 +43,14 @@
       .search-form button {
         padding: 10px;
         border: none;
-        background-color: #007bff;
+        background-color: #007bff; /* Adjust the color as needed */
         color: white;
         border-radius: 0 5px 5px 0;
         cursor: pointer;
       }
 
       .search-form button:hover {
-        background-color: #0056b3;
-      }
-
-      body {
-        background: radial-gradient(circle, rgba(10,10,10,1) 0%, rgba(0,0,0,1) 100%);
-        overflow: hidden;
+        background-color: #0056b3; /* Darken the button on hover */
       }
     </style>
   </head>
@@ -137,6 +132,46 @@
           <p></p>
         </div>
       </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
     </section>
 
     <section class="footer">
@@ -151,73 +186,30 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap"></script>
 
     <script>
-      // Advanced AI-style animations
       gsap.fromTo(
         ".header-laptop-1",
-        { x: -800, rotationY: 90, opacity: 0.3, boxShadow: "0px 0px 30px 5px rgba(0,255,255,0.5)" },
-        { 
-          x: 0, 
-          rotationY: 0, 
-          opacity: 1, 
-          duration: 2.5, 
-          ease: "expo.inOut",
-          boxShadow: "0px 0px 10px 5px rgba(0,255,255,1)" 
-        }
+        { x: -800, rotation: 40 },
+        { x: 0, rotation: 0, duration: 2, ease: "expo.out" }
       );
-
       gsap.fromTo(
         ".header-laptop-4",
-        { x: 2000, rotationY: -90, opacity: 0.3, boxShadow: "0px 0px 30px 5px rgba(0,255,255,0.5)" },
-        { 
-          x: 0, 
-          rotationY: 0, 
-          opacity: 1, 
-          duration: 2.5, 
-          delay: 0.8, 
-          ease: "power3.inOut",
-          boxShadow: "0px 0px 10px 5px rgba(0,255,255,1)" 
-        }
+        { x: 2000, rotation: -60 },
+        { x: 0, rotation: 0, duration: 2, delay: 1, ease: "expo.out" }
       );
-
       gsap.fromTo(
         ".header-laptop-5",
-        { y: -800, opacity: 0.3 },
-        { 
-          y: 0, 
-          opacity: 1, 
-          duration: 2, 
-          delay: 1.2, 
-          ease: "expo.inOut", 
-          boxShadow: "0px 0px 15px 3px rgba(0, 0, 255, 0.8)" 
-        }
+        { y: -800 },
+        { y: 0, duration: 2, delay: 0.5, ease: "expo.out" }
       );
-
       gsap.fromTo(
         ".header-laptop-6",
-        { y: -800, rotationX: 30, opacity: 0.3 },
-        { 
-          y: 0, 
-          rotationX: 0, 
-          opacity: 1, 
-          duration: 2, 
-          delay: 1.8, 
-          ease: "expo.inOut", 
-          boxShadow: "0px 0px 20px 5px rgba(255, 255, 255, 0.9)" 
-        }
+        { y: -800 },
+        { y: 0, duration: 2, delay: 2, ease: "expo.out" }
       );
-
       gsap.fromTo(
         ".header-laptop-2",
-        { y: -800, rotationZ: 45, opacity: 0.3 },
-        { 
-          y: 0, 
-          rotationZ: 0, 
-          opacity: 1, 
-          duration: 2, 
-          delay: 2.2, 
-          ease: "elastic.out(1, 0.5)", 
-          boxShadow: "0px 0px 20px 5px rgba(255, 255, 0, 1)" 
-        }
+        { y: -800, rotation: 30 },
+        { y: 0, rotation: 0, duration: 2, delay: 2, ease: "bounce.out" }
       );
     </script>
 
@@ -235,6 +227,7 @@
       const form = document.querySelector("form");
       const questionElement = form.question;
       const resultSection = document.querySelector(".results");
+
       const loadingSection = document.querySelector(".loading-div");
       const questionLinks = document.querySelectorAll(".title");
       const questionText = document.querySelectorAll(".body");
@@ -242,6 +235,7 @@
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
+
         loadingSection.style.display = "block";
         resultSection.style.display = "none";
         noResultsDiv.style.display = "none";
