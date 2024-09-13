@@ -237,7 +237,7 @@ button {
   font-size: 1rem; /* Thinner button */
   color: #ffffff;
   padding: 6px 12px; /* Reduced padding for a thinner button */
-  border-radius: 5px;
+/*   border-radius: 5px; */
   cursor: pointer;
   transition: background 0.3s ease;
   margin-top: 10px; /* Ensure it appears below the input */
