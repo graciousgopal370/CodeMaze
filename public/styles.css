@@ -375,6 +375,9 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+
 }
 
 .footer-container a img {
