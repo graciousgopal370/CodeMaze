@@ -1,9 +1,85 @@
 /* Global Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background: #1e1e1e;
+  font-family: "Fira Code", monospace;
+  color: #d4d4d4;
+  overflow-x: hidden;
+  display: flex; /* Add flex to center content */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  min-height: 100vh; /* Ensure body covers full viewport height */
+}
+
+/* Search Form Styling */
+.search-form {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+input {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  width: 80%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #d4d4d4;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #61dafb;
+}
+
+button {
+  background: #007acc;
+  border: none;
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px; /* Adds space between input and button */
+}
+
+button:hover {
+  background: #005f99;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 400px) {
+  input {
+    width: 100%; /* Ensure input takes full width on small screens */
+  }
+}
+
 
 /* Body Styling */
 body {
@@ -361,4 +437,6 @@ button:hover {
   margin-bottom: 1rem;
 }
 
-.rule-box
+.rule-box {
+  width: 70;
+}
